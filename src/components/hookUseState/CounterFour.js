@@ -11,7 +11,7 @@ function CounterFour() {
     }
   return (
     <div>
-        <button onClick={addItem}>Add number</button>
+        <button onClick={addItem}>Add number and List them</button>
         <ul>
             {
                 items.map(item =>(
