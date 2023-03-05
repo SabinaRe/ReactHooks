@@ -4,8 +4,9 @@ function IntervalCounter() {
     const[count, setCount] = useState(0)
 
     const tick=()=>{
-        setCount(count+1)
-        //setCount(prevC => prevC+1) with this you don't have to pass count in the array dependency
+        // setCount(count+1)
+        setCount(prevC => prevC+1)
+        //  with this you don't have to pass count in the array dependency
         //as the prevC is keeing track of count value
     }
 
@@ -14,7 +15,7 @@ function IntervalCounter() {
         return(()=>{
             clearInterval(interval)
         })
-    },[count])
+    },[])
   return (
     <div>
         {count}
